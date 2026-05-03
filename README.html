@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>工具导航</title>
+<style>
+body{font-family:Arial;background:#f5f7fa;padding:20px}
+button{margin:6px;padding:10px 16px;cursor:pointer}
+#home button{font-size:16px}
+#content{margin-top:20px}
+ul{padding-left:20px}
+li{margin-bottom:6px}
+a{color:#0056b3;text-decoration:none}
+a:hover{text-decoration:underline}
+.back{margin-top:20px;display:inline-block}
+</style>
+</head>
+<body>
+
+<div id="home">
+  <h2>🔧 工具导航</h2>
+  <button onclick="show('mail')">📧 临时邮箱</button>
+  <button onclick="show('sms')">📱 临时号码</button>
+</div>
+
+<div id="mail" style="display:none">
+  <h2>📧 临时邮箱（强烈推荐）</h2>
+  <ul>
+    <li><a href="https://temp-mail.org/zh/" target="_blank">Temp-Mail</a>
+    <li><a href="https://mail.tm" target="_blank">Mail.tm</a>
+    <li><a href="https://tempmail.plus/zh" target="_blank">TempMail.Plus</a>
+    <li><a href="https://www.yopmail.com/zh/" target="_blank">YOPmail</a>
+    <li><a href="https://10minutemail.net/?lang=zh-cn" target="_blank">10MinuteMail</a>
+    <li><a href="https://www.guerrillamail.com/zh/" target="_blank">GuerrillaMail</a>
+    <li><a href="https://temp.now" target="_blank">Temp.now</a>
+    <li><a href="https://mailnesia.com" target="_blank">Mailnesia</a>
+  </ul>
+  <a class="back" onclick="show('home')">⬅ 返回首页</a>
+</div>
+
+<div id="sms" style="display:none">
+  <h2>📱 临时号码（强烈推荐）</h2>
+  <ul>
+    <li><a href="https://yunduanxin.net" target="_blank">云短信</a>
+    <li><a href="https://www.zusms.com" target="_blank">ZUSMS</a>
+    <li><a href="https://temporarynumber.com/zh/receive-sms-online" target="_blank">TemporaryNumber</a>
+    <li><a href="https://5sim.net/zh" target="_blank">5SIM</a>
+    <li><a href="https://www.freereceivesms.com" target="_blank">FreeReceiveSMS</a>
+    <li><a href="https://smsjisu.com/" target="_blank">SmsJisu</a>
+  </ul>
+  <a class="back" onclick="show('home')">⬅ 返回首页</a>
+</div>
+
+<script>
+function show(page){
+  document.getElementById('home').style.display='none';
+  document.getElementById('mail').style.display='none';
+  document.getElementById('sms').style.display='none';
+  document.getElementById(page).style.display='block';
+}
+</script>
+
+</body>
+</html>
